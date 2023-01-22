@@ -1,0 +1,336 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    position: relative;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    color: white;
+}
+h1{
+    font-weight:700 ;
+}
+h3{
+    font-weight: 500;
+}
+p{
+    font-weight: 300;
+}
+@media (max-width:600px) {
+    
+}
+
+/* PRELOADER CSS STYLING */
+#preloader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#preloader>img{
+    scale: .4;
+    animation: scale 1s linear infinite;
+}
+@media (max-width:600px) {
+    #preloader>img{
+        scale: .2;
+    }
+}
+@keyframes scale {
+    0%{
+        scale: .2;
+    }
+    50%{
+        scale: .6;
+    }
+    100%{
+        scale: .2;
+    }
+    
+}
+
+@-webkit-keyframes scale{
+    0%{
+        scale: .2;
+    }
+    50%{
+        scale: .6;
+    }
+    100%{
+        scale: .2;
+    }
+}
+
+
+/* the page main body */
+.main-container{
+    position: relative;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.912);
+    height: 100vh;
+    overflow-x: hidden;
+}
+/* first section background image */
+#background{
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    z-index: -3;
+    top: 0%;
+    filter: blur(2rem);
+}
+
+#first-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#first-section>img:nth-of-type(2){
+    margin-top: 2rem;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    transition: border-radius .2s;
+}
+#first-section>img:nth-of-type(2):hover{
+    border-radius: 5%;
+}
+#first-section>h1{
+    margin-top: .3rem;
+    font-size: 3.7rem;
+}
+@media (max-width:600px) {
+    #first-section>h1{
+        font-size: 3.2rem;
+    }
+}
+#first-section>h3{
+    margin-top: .3rem;
+    font-size: 2rem;
+}
+@media (max-width:600px) {
+    #first-section>h3{
+        font-size: 1.7rem;
+    }
+}
+#first-section>p{
+    margin-top: 1rem;
+    width: 40%;
+    font-size: 1rem;
+    text-align: center;
+    opacity: .7;
+}
+@media (max-width:600px) {
+    #first-section>p{
+        width: 100%;
+    }
+}
+#first-section>div{
+    margin-top: .7rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+    color: white;
+}
+#first-section>div>a{
+    transition: transform .2s;
+}
+#first-section>div>a:hover{
+    transform: scale(.8);
+}
+
+/* ====second section css code==== */
+#second-section{
+    margin-top: 3rem ;
+    display: flex;
+    gap: 1.5rem;
+
+}
+@media (max-width:600px) {
+    #second-section{
+        flex-direction: column;
+    }
+}
+#second-section>div{
+    width: 50%;
+    border: 1px solid rgb(24, 24, 24);
+    border-radius: 5px;
+
+}
+@media (max-width:600px) {
+    #second-section>div{
+        width: 100%;
+    }
+}
+/* my skills css section */
+#second-section>div:nth-of-type(1){
+    padding: 1rem;
+}
+#second-section>div:nth-of-type(1)>h1{
+    text-align: center;
+}
+#second-section>div:nth-of-type(1)>ul{
+    padding-left:1rem;
+}
+#second-section>div:nth-of-type(1)>ul>li{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+/* my tech journey */
+#second-section>div:nth-of-type(2){
+    padding: 1rem;
+}
+#second-section>div:nth-of-type(2)>h1{
+    text-align: center;
+}
+#second-section>div:nth-of-type(2)>p{
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+    opacity: .7;
+}
+/* third-section css */
+#third-section{
+    margin: 2rem 0;
+    border: 1px solid rgb(24, 24, 24);
+    border-radius: 5px;
+}
+#third-section>h1{
+    text-align: center;
+    padding: 1rem;
+}
+#project-wrapper{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+    text-align: center;
+    flex-wrap: wrap;
+}
+@media (max-width:600px) {
+    #project-wrapper{
+        flex-direction: column;
+    }
+}
+#project-wrapper>div{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width:600px) {
+    #project-wrapper>div{
+        width: 100%;
+    }
+}
+#project-wrapper>div>iframe{
+    height: 50vh;
+    border-radius: 5px;
+    margin-bottom: .4rem;
+}
+#project-wrapper>div>a{
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform .2s;
+}
+#project-wrapper>div>a:hover{
+    transform: scale(1.4);
+}
+#project-wrapper>div>p{
+    font-weight: 300;
+    opacity: .7;
+}
+
+/* ====forth section css style==== */
+#forth-section{
+    border: 1px solid rgb(24, 24, 24);
+    border-radius: 5px;
+}
+#forth-section>h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#image-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#image-wrapper>i:nth-of-type(1){
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    background-color: rgb(24, 24, 24);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform .2s;
+
+}
+#image-wrapper>i:nth-of-type(2){
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    background-color: rgb(24, 24, 24);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .2s;
+    
+}
+#image-wrapper>i:nth-of-type(1):hover,#image-wrapper>i:nth-of-type(2):hover{
+    transform: scale(.8);
+}
+#image-wrapper>i:nth-of-type(1):active,#image-wrapper>i:nth-of-type(2):active{
+    background-color: transparent;
+}
+#main-img{
+    width: 400px;
+    height: 600px;
+    border-radius: 5px;
+}
+@media (max-width:600px) {
+    #main-img{
+        width: 100%;
+    }
+}
+.other-img{
+    display: none;
+}
+#contact-me-section{
+    position: fixed;
+    top: 90%;
+    right: 5%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+    padding: 1rem;
+    border-radius: 50%;
+}
+#contact-me-section>a>i{
+    color: green;
+}
+footer{
+    text-align: center;
+    font-size: .8rem;
+    margin-top: 1rem;
+    border: 1px solid rgb(24, 24, 24);
+    border-radius: 5px;
+    padding:1rem;
+}
